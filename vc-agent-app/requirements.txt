@@ -1,0 +1,7 @@
+streamlit
+langchain
+langchain-community
+langchain-core
+langchain-together
+exa-py
+unstructured
