@@ -24,8 +24,8 @@ llm = Together(
 exa = Exa(api_key=EXA_API_KEY)
 
 # === Streamlit UI ===
-st.set_page_config(page_title="VC Analysis Agent")
-st.title("📊 VC Analysis Agent")
+st.set_page_config(page_title="VC Analysis")
+st.title("📊 VC Analysis")
 
 uploaded_file = st.file_uploader("Upload a PDF pitch deck", type=["pdf"])
 
