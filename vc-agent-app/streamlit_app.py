@@ -1,7 +1,7 @@
 import os
 import streamlit as st
 from dotenv import load_dotenv
-from langchain_community.document_loaders import UnstructuredFileLoader
+from langchain_community.document_loaders import PyPDFLoader
 from langchain_core.documents import Document
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
@@ -38,7 +38,7 @@ if uploaded_file and question:
             f.write(uploaded_file.read())
 
         # Load and extract text
-        loader = UnstructuredFileLoader("temp.pdf")
+l       loader = PyPDFLoader("temp.pdf")
         docs = loader.load()
         text = "\n".join([doc.page_content for doc in docs])
         doc = Document(page_content=text)
