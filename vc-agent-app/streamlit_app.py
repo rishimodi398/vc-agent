@@ -38,7 +38,7 @@ if uploaded_file and question:
             f.write(uploaded_file.read())
 
         # Load and extract text
-l       loader = PyPDFLoader("temp.pdf")
+        loader = PyPDFLoader("temp.pdf")
         docs = loader.load()
         text = "\n".join([doc.page_content for doc in docs])
         doc = Document(page_content=text)
